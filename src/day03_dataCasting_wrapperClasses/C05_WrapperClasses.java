@@ -1,4 +1,4 @@
-package day03_dataCasting_Increment;
+package day03_dataCasting_wrapperClasses;
 
 public class C05_WrapperClasses {
     public static void main(String[] args) {

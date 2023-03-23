@@ -1,4 +1,4 @@
-package day03_dataCasting_Increment;
+package day03_dataCasting_wrapperClasses;
 
 import java.util.Scanner;
 
