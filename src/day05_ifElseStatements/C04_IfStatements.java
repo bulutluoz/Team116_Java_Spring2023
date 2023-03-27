@@ -16,12 +16,12 @@ public class C04_IfStatements {
 
         int sayac=0;
 
-        if (girilensayi%2==0) sayac++ ;
-        if (girilensayi%3==0) sayac++ ;
-        if (girilensayi%5==0) sayac++ ;
-        if (girilensayi%7==0) sayac++ ;
-        if (girilensayi%11==0) sayac++ ;
-        if (girilensayi%23==0) sayac++ ;
+        if (girilensayi %2  ==0) sayac++ ;
+        if (girilensayi %3  ==0) sayac++ ;
+        if (girilensayi %5  ==0) sayac++ ;
+        if (girilensayi %7  ==0) sayac++ ;
+        if (girilensayi %11 ==0) sayac++ ;
+        if (girilensayi %23 ==0) sayac++ ;
 
         System.out.println("Girilen sayi, istenen sayilardan "+ sayac + " tanesine tam bolunebiliyor." );
 

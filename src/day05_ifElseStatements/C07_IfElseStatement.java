@@ -2,11 +2,13 @@ package day05_ifElseStatements;
 
 import java.util.Scanner;
 
-public class C05_IfStatements {
+public class C07_IfElseStatement {
 
     public static void main(String[] args) {
-        // Soru 4- Kullanicidan bir ucgenin 3 kenar uzunlugunu alin,
-        //         ucgen eskenar ise “Eskenar ucgen” yazdirin.
+
+        // Soru 1- Kullanicidan bir ucgenin 3 kenar uzunlugunu alin,
+        //         ucgen eskenar ise “Eskenar ucgen” yazdirin,
+        //         degilse “Eskenar degil” yazdirin.
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Lutfen ucgenin kenar uzunluklarini giriniz");
@@ -17,6 +19,10 @@ public class C05_IfStatements {
 
         if (kenar1 == kenar2  && kenar2== kenar3 && kenar1>0){
             System.out.println("Girilen degerler eskenar ucgen olusturur");
+        }else {
+            System.out.println("Girilen kenarlar bir eskenar ucgen olusturmaz");
         }
+
+
     }
 }
