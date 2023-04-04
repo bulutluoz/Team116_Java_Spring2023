@@ -24,5 +24,8 @@ public class C05_NestedForLoop {
             }
             System.out.println("");
         }
+
+
+
     }
 }
