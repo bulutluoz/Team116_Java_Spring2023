@@ -24,7 +24,7 @@ public class C07_SifreKontrolu {
         String sifre = "";
         boolean sifreGecerliMi=false;
 
-        while (!sifreGecerliMi){
+        while ( ! sifreGecerliMi ){
             System.out.println("Lutfen bir sifre girin");
             sifre= scanner.nextLine();
 
