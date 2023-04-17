@@ -27,7 +27,7 @@ public class C05_Hastane {
      */
 
     C05_Hastane (){
-        System.out.println("parametresiz kod calisti");
+        System.out.println("parametresiz constructor calisti");
     }
 
     static String hastaneAdi = "Yildiz Hastanesi";
