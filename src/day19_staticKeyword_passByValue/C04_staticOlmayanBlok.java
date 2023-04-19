@@ -1,13 +1,13 @@
 package day19_staticKeyword_passByValue;
 
-public class C03_staticOlmayanBlok {
+public class C04_staticOlmayanBlok {
 
     public static void main(String[] args) {
         System.out.println("main method calisti");
 
-        C03_staticOlmayanBlok obj1 = new C03_staticOlmayanBlok();
-        C03_staticOlmayanBlok obj2 = new C03_staticOlmayanBlok();
-        C03_staticOlmayanBlok obj3 = new C03_staticOlmayanBlok();
+        C04_staticOlmayanBlok obj1 = new C04_staticOlmayanBlok();
+        C04_staticOlmayanBlok obj2 = new C04_staticOlmayanBlok();
+        C04_staticOlmayanBlok obj3 = new C04_staticOlmayanBlok();
     }
 
 
