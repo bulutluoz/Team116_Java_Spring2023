@@ -2,6 +2,19 @@ package day27_pollymorphism_abstractClasses;
 
 public class C05_Nissan extends C03_Araba{
 
+    /*
+        Abstract class'lar yokken class'larimiza ozel bir isim vermemistik
+        Ama abstract class'lar devreye girince
+        class turunu belirtmek icin abstract olmayan class'lara CONCRETE CLASS denir
+
+        bugune kadar bizim olusturdugumuz tum class'lar concrete class idi
+        Concrete class/method'lara concrete yazilmaz
+        sadece class/method'dan bahsedilirken
+        abstract olmadigini vurgulamak icin concrete class/method deriz
+     */
+
+    // abstract void  deneme(); kullanilamaz
+
 
     @Override
     void teker() {
