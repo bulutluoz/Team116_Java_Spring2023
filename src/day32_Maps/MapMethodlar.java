@@ -2,6 +2,7 @@ package day32_Maps;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapMethodlar {
 
@@ -44,5 +45,26 @@ public class MapMethodlar {
         ogrenciMap.put(106,"Sevgi-Can-10-K-MF");
 
         return ogrenciMap;
+    }
+
+
+    public static void tumOgrenciListesiYazdir(Map<Integer,String> ogrenciMap){
+
+        // tum ogrencilerin isim ve soyisimlerini bir liste olarak yazdirin
+        // tum ogrencilere ulasabilmek icin, tum ogrencilerin key'lerine ihtiyacimiz var
+
+         Set<Integer> ogrenciKeySeti= ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106]
+
+        // tum key'leri tek tek ele alip
+        // o key'e ait isim ve soyismi, yukaridaki method'u kullanarak yazdiralim
+
+        int siraNo=1;
+        for (Integer eachKey: ogrenciKeySeti
+             ) {
+
+            // her bir key'e ait isim soyismi yazdiralim
+            System.out.println(siraNo+"- "+numaraIleOgrenciBulma(ogrenciMap, eachKey));
+            siraNo++;
+        }
     }
 }

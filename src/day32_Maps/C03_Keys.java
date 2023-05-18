@@ -52,5 +52,7 @@ public class C03_Keys {
         // tum ogrencilerin isim ve soyisimlerini bir liste olarak yazdiran
         // bir method olusturun
 
+        MapMethodlar.tumOgrenciListesiYazdir(ogrenciMap);
+
     }
 }
