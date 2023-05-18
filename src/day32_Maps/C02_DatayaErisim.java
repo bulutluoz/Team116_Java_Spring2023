@@ -14,6 +14,7 @@ public class C02_DatayaErisim {
         // bu islemleri method olarak olusturup
         // ihtiyac duyuldugunda kullanmak daha KULLANISLI olacaktir
 
+
         Map<Integer,String> ogrenciMap= new HashMap<>();
         ogrenciMap.put(101,"Ali-Can-11-H-MF");
         ogrenciMap.put(102,"Veli-Cem-10-K-TM");
@@ -21,5 +22,11 @@ public class C02_DatayaErisim {
         ogrenciMap.put(104,"Ayse-Can-10-H-MF");
         ogrenciMap.put(105,"Sevgi-Cem-11-M-TM");
         ogrenciMap.put(106,"Sevgi-Can-10-K-MF");
+
+        // map ve ogrenci numarasi verdigimizde, istenen formatta isim soyisim bilgisini
+        // bize donduren bir method olusturalim
+
+        System.out.println(MapMethodlar.numaraIleOgrenciBulma(ogrenciMap, 104));
+
     }
 }
