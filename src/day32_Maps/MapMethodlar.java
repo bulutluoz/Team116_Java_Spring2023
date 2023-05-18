@@ -99,4 +99,68 @@ public class MapMethodlar {
 
         }
     }
+
+    public static void numaraAraligindakiOgrencileriyazdir(Map<Integer, String> ogrenciMap, int basNo, int bitNo) {
+        // ogrenci numarasi verilen iki deger arasinda olan (sinir degerleri dahil)
+        // tum ogrencilerin numara, isim, soyisim ve bolumlerini yazdirin
+
+
+        // ogrencileri numaralarina gore kontrol edebilmek icin tum key'lere ihtiyacim var
+
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106]
+        int siraNo=1;
+        for (Integer eachKey : ogrenciKeySeti
+             ) { // 101
+
+            if (basNo<= eachKey && eachKey<=bitNo){
+                // istenen araliktaki key'ler buraya ulasir, ornegin 103
+                // burada o key'e ait isim, soyisim ve bolum'e ulasmaliyiz
+
+                String value = ogrenciMap.get(eachKey); // Ali-Can-11-H-MF
+
+                String[] valueArr= value.split("-"); // [Ali, Can, 11, H, MF]
+
+                System.out.println( siraNo +"- "+
+                                    eachKey + " "+
+                                    valueArr[0]+ " "+
+                                    valueArr[1]+ " "+
+                                    valueArr[4]);
+
+                siraNo++;
+
+            }
+
+
+
+        }
+
+
+
+    }
+
+    public static Map<Integer, String> numaraIleSoyisimUpdateEt(Map<Integer, String> ogrenciMap, int ogrNo, String yeniSoyisim) {
+
+
+        // 102 numarali ogrencinin value'sunu kaydet  Veli-Cem-10-K-TM
+        String value=ogrenciMap.get(ogrNo);
+
+        // update yapabilmek icin bilgileri split etmeliyiz [Veli, Cem, 10, K, TM]
+        String[] valueArr = value.split("-");
+
+        // bu array'de soyisim olarak yeni soyismi atayabilirim [Veli, Han, 10, K, TM]
+        valueArr[1]= yeniSoyisim;
+
+        // bu array'deki guncel bilgileri value yapisina uygun olarak yeniden birlestirmeliyiz
+        // Veli-Han-10-K-TM
+        value= valueArr[0]+"-"+valueArr[1]+"-"+valueArr[2]+"-"+valueArr[3]+"-"+valueArr[4];
+
+        // 102 numarali ogrenciyi yeni value'su ile map'e ekleyelim
+        ogrenciMap.put(ogrNo,value);
+        // key'ler unique oldugu icin
+        // varolan bir elementi yeniden eklemek isterseniz
+        // key varoldugu icin, eski value'yu silip, yeni value yapar
+
+
+        return ogrenciMap;
+    }
 }
