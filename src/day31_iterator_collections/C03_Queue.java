@@ -52,8 +52,5 @@ public class C03_Queue {
         // System.out.println(liste2.element()); // NoSuchElementException
         // bastaki elementi silmeden bize dondurur, bos liste olursa exception olusur
 
-
-
-
     }
 }
