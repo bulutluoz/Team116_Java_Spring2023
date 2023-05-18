@@ -1,5 +1,6 @@
 package day32_Maps;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -65,6 +66,37 @@ public class MapMethodlar {
             // her bir key'e ait isim soyismi yazdiralim
             System.out.println(siraNo+"- "+numaraIleOgrenciBulma(ogrenciMap, eachKey));
             siraNo++;
+        }
+    }
+
+    public static void istenenSiniftakiOgrencileriYazdir(Map<Integer, String> ogrenciMap, int sinif) {
+
+        // istenen siniftaki tum ogrencilerin isim ve soyismlerini yazdirin
+
+        // value'lari kaydedelim
+        Collection<String> valueCollection = ogrenciMap.values();
+
+        // siniflari kontrol edip, istenen siniftaki ogrencileri yazdirmak icin
+        // herbir value'yu gozden gecirmeliyiz
+        int siraNo=1;
+        for (String eachValue: valueCollection
+             ) { // Ali-Can-11-H-MF
+
+            // herbir value'yu split edip, class bilgisini kontrol etmeliyiz
+
+            String[] eachValueArr= eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // array'den sinif bilgisini kontrol edip
+            // istenen sinif degerine esit ise
+            // isim ve soyisim degerlerini yazdiralim
+
+
+            if (eachValueArr[2].equals(sinif+"")) {
+
+                System.out.println(siraNo +"- "+ eachValueArr[0]+" "+eachValueArr[1] +" " + eachValueArr[2]);
+                siraNo++;
+            }
+
         }
     }
 }
