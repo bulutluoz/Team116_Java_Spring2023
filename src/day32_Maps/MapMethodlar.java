@@ -194,4 +194,48 @@ public class MapMethodlar {
          */
 
     }
+
+    public static Map<Integer, String> yilSonuSinifArtir(Map<Integer, String> ogrenciMap) {
+
+        // tum entry'leri ele almak icin bir entrySet olusturalim
+
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti= ogrenciMap.entrySet();
+
+        // ogrenciEntrySet'inde herBir entry'i ele alip
+        // istenen update'i yapalim
+
+        for (Map.Entry<Integer,String> eachEntry:ogrenciEntrySeti
+             ) {
+            // sinifi update edebilmek icin once value'u parcalayip
+            // istenen bilgiye ulasalim,
+            String eachValue= eachEntry.getValue(); // 101=Ali-Can-11-H-MF
+            String[] eachValueArr = eachValue.split("-");// [Ali, Can, 11, H, MF]
+
+
+            // array'de 2.index'deki sinif bilgisini inceleyip
+            // gerekli update'i yapalim
+            // 9-10-11 ==> bir artir, 12 ==> Mezun , Mezun ==> dokunma
+            if (!eachValueArr[2].equalsIgnoreCase("Mezun")){
+
+                Integer sinif = Integer.parseInt(eachValueArr[2]); // 11
+
+                if (sinif < 12){
+                    sinif++;
+                    eachValueArr[2] = ""+ sinif;
+                }else {
+                    eachValueArr[2] ="Mezun";
+                }
+                // [Ali, Can, 12, H, MF]
+            }
+
+            // bilgi update edildikten sonra array'de yapilan degisikligin
+            // map'e islenmesi icin, herbir entry'i update edelim
+
+            eachEntry.setValue(eachValueArr[0] + "-"+ eachValueArr[1] + "-"+
+                    eachValueArr[2] + "-"+ eachValueArr[3] + "-"+eachValueArr[4]);
+
+        }
+
+        return ogrenciMap;
+    }
 }
