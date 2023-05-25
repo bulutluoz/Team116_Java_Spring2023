@@ -238,4 +238,29 @@ public class MapMethodlar {
 
         return ogrenciMap;
     }
+
+    public static Map<Integer, String> soyisimleriBuyukHarfYap(Map<Integer, String> ogrenciMap) {
+        // soyisimleri buyuk harf yap
+
+        // soyisim bilgisine ulasincaya kadar bol
+        Set<Map.Entry<Integer,String>> ogrenciEntrySeti = ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer,String>  eachEntry : ogrenciEntrySeti
+             ) { // 101=Ali-Can-11-H-MF
+
+            String eachValue = eachEntry.getValue(); // Ali-Can-11-H-MF
+            String[] eachvalueArr = eachValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // soyisim bilgisini update et
+
+            eachvalueArr[1] = eachvalueArr[1].toUpperCase(); // // [Ali, CAN, 11, H, MF]
+
+            // soyismin yeni hali ile map'i update et
+
+            eachEntry.setValue(eachvalueArr[0] + "-"+eachvalueArr[1] + "-"+
+                    eachvalueArr[2] + "-"+eachvalueArr[3] + "-"+eachvalueArr[4]);
+        }
+
+        return ogrenciMap;
+    }
 }
